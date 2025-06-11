@@ -41,10 +41,10 @@ $(document).ready(function () {
             x = 0;
         } else {
             var tab = str.split(" ");
-            if (tab[1] == "o/s") x = tab[0];
-            else if (tab[1] == "Ko/s") x = tab[0]*1024;
-            else if (tab[1] == "Mo/s") x = tab[0]*1048576;
-            else if (tab[1] == "Go/s") x = tab[0]*1073741824;
+            if (tab[1] == "B/s") x = tab[0];
+            else if (tab[1] == "KB/s") x = tab[0]*1024;
+            else if (tab[1] == "MB/s") x = tab[0]*1048576;
+            else if (tab[1] == "GB/s") x = tab[0]*1073741824;
             else x = 0;
         }
         
@@ -79,20 +79,20 @@ $(document).ready(function () {
             x = 0;
         } else {
             var tab = a.split(" ");
-            if (tab[1] == "o") x = tab[0];
-            if (tab[1] == "Ko") x = tab[0]*1024;
-            if (tab[1] == "Mo") x = tab[0]*1048576;
-            if (tab[1] == "Go") x = tab[0]*1073741824;
+            if (tab[1] == "B") x = tab[0];
+            if (tab[1] == "KB") x = tab[0]*1024;
+            if (tab[1] == "MB") x = tab[0]*1048576;
+            if (tab[1] == "GB") x = tab[0]*1073741824;
         }
         
         if (b == "--") {
             y = 0;
         } else {
             var tab = b.split(" ");
-            if (tab[1] == "o") y = tab[0];
-            if (tab[1] == "Ko") y = tab[0]*1024;
-            if (tab[1] == "Mo") y = tab[0]*1048576;
-            if (tab[1] == "Go") y = tab[0]*1073741824;
+            if (tab[1] == "B") x = tab[0];
+            if (tab[1] == "KB") x = tab[0]*1024;
+            if (tab[1] == "MB") x = tab[0]*1048576;
+            if (tab[1] == "GB") x = tab[0]*1073741824;
         }
         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     };
@@ -105,20 +105,20 @@ $(document).ready(function () {
             x = 0;
         } else {
             var tab = a.split(" ");
-            if (tab[1] == "o") x = tab[0];
-            if (tab[1] == "Ko") x = tab[0]*1024;
-            if (tab[1] == "Mo") x = tab[0]*1048576;
-            if (tab[1] == "Go") x = tab[0]*1073741824;
+            if (tab[1] == "B") x = tab[0];
+            if (tab[1] == "KB") x = tab[0]*1024;
+            if (tab[1] == "MB") x = tab[0]*1048576;
+            if (tab[1] == "GB") x = tab[0]*1073741824;
         }
         
         if (b == "--") {
             y = 0;
         } else {
             var tab = b.split(" ");
-            if (tab[1] == "o") y = tab[0];
-            if (tab[1] == "Ko") y = tab[0]*1024;
-            if (tab[1] == "Mo") y = tab[0]*1048576;
-            if (tab[1] == "Go") y = tab[0]*1073741824;
+            if (tab[1] == "B") x = tab[0];
+            if (tab[1] == "KB") x = tab[0]*1024;
+            if (tab[1] == "MB") x = tab[0]*1048576;
+            if (tab[1] == "GB") x = tab[0]*1073741824;
         }
         return ((x < y) ? 1 : ((x > y) ? -1 : 0));
     };
@@ -154,15 +154,15 @@ $(document).ready(function () {
         //num = num / 8;
 
         if (num > 1099511627776) {
-            num = roundNumber((num / 1099511627776), 3) + " To";
+            num = roundNumber((num / 1099511627776), 3) + " TB";
         } else if (num > 1073741824) {
-            num = roundNumber((num / 1073741824), 2) + " Go";
+            num = roundNumber((num / 1073741824), 2) + " GB";
         } else if (num > 1048576) {
-            num = roundNumber((num / 1048576), 2) + " Mo";
+            num = roundNumber((num / 1048576), 2) + " MB";
         } else if (num > 1024) {
-            num = roundNumber((num / 1024), 1) + " Ko";
+            num = roundNumber((num / 1024), 1) + " KB";
         } else if (num > 0) {
-            num = Math.round(num) + " o";
+            num = Math.round(num) + " B";
         } else {
             num = "0";
         }
