@@ -1,5 +1,5 @@
 # wtBRMon
-![wtBRMon](https://raw.githubusercontent.com/wtc0der/wtBRMon/master/public_html/screenshot.jpg "wtBRMon")
+![wtBRMon](https://github.com/lin2yatou/wtBRMon/blob/eecc98eeb51ac5ebebeaa9dcfff29888e6785a7b/public_html/screenshot.jpg "wtBRMon")
 A OpenWRT realtime per-IP bandwidth Monitor
 
 ## Installation
